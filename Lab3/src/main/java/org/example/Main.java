@@ -13,6 +13,7 @@ public class Main {
 
         System.out.println("Початок обчислення...");
         CompletableFuture<BigInteger> future = CompletableFuture.supplyAsync(() -> fibonacci(n));
+        // BigInteger, тому що числа Фібоначчі після 46-го викликають переповнення змінних типу int
 
         try {
             System.out.println("Очікування завершення обчислень...");
